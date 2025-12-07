@@ -1,6 +1,6 @@
 # E-ink-Smartwatch
 An ultra-thin smartwatch (at just 4.5mm thick) which uses an E-ink display and two OLEDs to display information while consuming very little power. The main E-ink panel is touch-enabled, with two additional OLED panels above and below it to display auxiliary information, such as notifications, background activities etc. 
-The watch has built-in heart rate and spO2 sensing, as well as an IMU which enables it to run many programs and algorithms that track fitness stats. 
+The watch has built-in heart rate and spO2 sensing, as well as an IMU which enables it to run various programs and algorithms that track fitness stats. 
 
 <img width="2360" height="1640" alt="IMG_0535" src="https://github.com/user-attachments/assets/be53ef71-2b63-40c1-ab31-bafce802a875" />
 
