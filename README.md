@@ -11,6 +11,75 @@ The watch features a sleek design, with each component being laid out single fil
 The main microcontroller running the watch is an Espressif ESP32-S3 running with Bluetooth capabilities, which also allow for it to sync with a smartphone to relay notifications, workout data etc through firmware based on ESP-IDF. (Coming soon!)
 
 ---
+## PCB:
+
+
+*Parameters:*
+-  4 layers
+-  Flex PCB
+-  Single-sided component placement
+-  0.2mm board thickness
+-  Added 0.1mm FR4 stiffeners
+
+
+*Schematics:*
+[E-ink watch main schematic.pdf](https://github.com/user-attachments/files/24319560/E-ink.watch.main.schematic.pdf)
+[E-ink watch sensors schematic.pdf](https://github.com/user-attachments/files/24319562/E-ink.watch.sensors.schematic.pdf)
+[E-ink watch displays schematic.pdf](https://github.com/user-attachments/files/24319563/E-ink.watch.displays.schematic.pdf)
+[E-ink watch drivers schematic.pdf](https://github.com/user-attachments/files/24319564/E-ink.watch.drivers.schematic.pdf)
+
+
+*PCB Layout and render:*
+<img width="1454" height="585" alt="Screenshot 2025-12-14 at 1 22 46 pm" src="https://github.com/user-attachments/assets/16a535e6-246d-4e0d-91d4-3cafa5ae3504" />
+<img width="2560" height="1440" alt="render4" src="https://github.com/user-attachments/assets/a82eb673-f5c0-45c7-9ac9-8d790fc45b2b" />
+
+---
+## Bill of materials:
+
+*PCB:*
+
+| Manufacturer Part Number | Mfr.                        | Order Qty. | Unit Price(USD) | Ext.Price(USD) | Package                               | Description                                                                                                                | Product Link                                       |
+|--------------------------|-----------------------------|------------|-----------------|----------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
+| CC0402JRNPO9BN110        | YAGEO                       | 100        | 0.0012          | 0.12           | 0402                                  | 11pF ±5% 50V Ceramic Capacitor NP0 0402                                                                                    | https://www.lcsc.com/product-detail/C527000.html   |
+| GRM155R61E475ME15D       | muRata                      | 20         | 0.0377          | 0.75           | 0402                                  | 4.7uF ±20% 25V Ceramic Capacitor X5R 0402                                                                                  | https://www.lcsc.com/product-detail/C2858031.html  |
+| ESP32-S3                 | ESPRESSIF                   | 2          | 2.7791          | 5.56           | QFN-56-EP(7x7)                        | 150Mbps 2.4GHz 2.412GHz~2.484GHz QFN-56-EP(7x7) RF Transceiver ICs RoHS                                                    | https://www.lcsc.com/product-detail/C2913192.html  |
+| 2328702-6                | TE Connectivity             | 5          | 0.1654          | 0.83           | SMD,P=0.5mm,Surface Mount,Right Angle | FFC/FPC Connector 6 Position 0.5mm Pitch Double-Sided Contacts, Top and Bottom Entry Surface Mount, Right Angle -40℃~+85℃  | https://www.lcsc.com/product-detail/C3151647.html  |
+| FFC2B28-24-G             | Global Connector Technology | 1          | 0.5754          | 0.58           | SMD,P=0.5mm,Surface Mount,Right Angle | FFC/FPC Connector 24 Position 0.5mm Pitch Double-Sided Contacts, Top and Bottom Entry Surface Mount, Right Angle -25℃~+85℃ | https://www.lcsc.com/product-detail/C3151659.html  |
+| BHI260AP                 | Bosch                       | 1          | 8.7882          | 8.79           | LGA-44                                | LGA-44 IMUs (Inertial Measurement Units) RoHS                                                                              | https://www.lcsc.com/product-detail/C3288651.html  |
+| SI1308EDL-T1-GE3         | VISHAY                      | 5          | 0.1324          | 0.66           | SOT-323                               | N-Channel 30V 1.5A 0.4W Surface Mount SOT-323                                                                              | https://www.lcsc.com/product-detail/C469327.html   |
+| XC6206P302MR             | HXY MOSFET                  | 50         | 0.0154          | 0.77           | SOT-23                                | Linear Voltage Regulator IC Positive Fixed 1 Output 300mA SOT-23                                                           | https://www.lcsc.com/product-detail/C5148691.html  |
+| MBR0530                  | Huixin                      | 20         | 0.0205          | 0.41           | SOD-123                               | 5.5A 30V 500mV@500mA 500mA SOD-123 Single Diodes RoHS                                                                      | https://www.lcsc.com/product-detail/C49435625.html |
+| 0402WGF1004TCE           | UNI-ROYAL                   | 100        | 0.0006          | 0.06           | 0402                                  | 1MΩ ±1% 62.5mW 0402 Thick Film Resistor                                                                                    | https://www.lcsc.com/product-detail/C26083.html    |
+| CL05A105KA5NQNC          | Samsung Electro-Mechanics   | 100        | 0.0030          | 0.30           | 0402                                  | 1uF ±10% 25V Ceramic Capacitor X5R 0402                                                                                    | https://www.lcsc.com/product-detail/C52923.html    |
+| XL2EL89CPI-111YLC-40M    | YXC Crystal Oscillators     | 10         | 0.0578          | 0.58           | SMD3225-4P                            | Crystal 40MHz ±10ppm 15pF SMD3225-4P                                                                                       | https://www.lcsc.com/product-detail/C5444549.html  |
+| TS-1088-AR02016          | XUNPU                       | 10         | 0.0421          | 0.42           | SMD,4x3mm                             | Tactile Switch SPST 160gf 2mm SMD (SMT) Tab 4mm x 3mm Surface Mount                                                        | https://www.lcsc.com/product-detail/C720477.html   |
+| BSS138                   | R+O                         | 50         | 0.0170          | 0.85           | SOT-23                                | N-Channel 50V 340mA 350mW Surface Mount SOT-23                                                                             | https://www.lcsc.com/product-detail/C7420339.html  |
+| TCR2EF33,LM(CT           | TOSHIBA                     | 5          | 0.0829          | 0.41           | TSOT-25                               | Positive Fixed 3.3V TSOT-25 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators RoHS                                | https://www.lcsc.com/product-detail/C843273.html   |
+| LQG15HS3N3S02D           | muRata                      | 100        | 0.0076          | 0.76           | 0402                                  | 800mA 3.3nH 125mΩ 0402 Fixed Inductors RoHS                                                                                | https://www.lcsc.com/product-detail/C86064.html    |
+| MRA4003T3G               | onsemi                      | 10         | 0.0873          | 0.87           | SMA(DO-214AC)                         | Diode 300V 1A Surface Mount SMA(DO-214AC)                                                                                  | https://www.lcsc.com/product-detail/C94410.html    |
+| DRV2605LDGSR             | TI                          | 7          | 1.2502          | 8.75           | -                                     | -                                                                                                                          |                                                    |
+| LQG15HS2N0S02D           | muRata                      | 100        | 0.0081          | 0.81           | 0402                                  | 900mA 2nH 90mΩ 0402 Fixed Inductors RoHS                                                                                   | https://www.lcsc.com/product-detail/C18216.html    |
+| 0402WGF5603TCE           | UNI-ROYAL                   | 100        | 0.0005          | 0.05           | 0402                                  | 560kΩ ±1% 62.5mW 0402 Thick Film Resistor                                                                                  | https://www.lcsc.com/product-detail/C132339.html   |
+| CL05B103KB5NNNC          | Samsung Electro-Mechanics   | 100        | 0.0014          | 0.14           | 0402                                  | 10nF ±10% 50V Ceramic Capacitor X7R 0402                                                                                   | https://www.lcsc.com/product-detail/C15195.html    |
+| 0402B102K500NT           | FH                          | 100        | 0.0011          | 0.11           | 0402                                  | 1nF ±10% 50V Ceramic Capacitor X7R 0402                                                                                    | https://www.lcsc.com/product-detail/C1523.html     |
+| CL05B104KO5NNNC          | Samsung Electro-Mechanics   | 100        | 0.0012          | 0.12           | 0402                                  | 100nF ±10% 16V Ceramic Capacitor X7R 0402                                                                                  | https://www.lcsc.com/product-detail/C1525.html     |
+| 0402CG1R0C500NT          | FH                          | 100        | 0.0012          | 0.12           | 0402                                  | 1pF 50V Ceramic Capacitor C0G 0402                                                                                         | https://www.lcsc.com/product-detail/C1550.html     |
+| CL05A106MQ5NUNC          | Samsung Electro-Mechanics   | 100        | 0.0044          | 0.44           | 0402                                  | 10uF ±20% 6.3V Ceramic Capacitor X5R 0402                                                                                  | https://www.lcsc.com/product-detail/C15525.html    |
+| CL05B224KO5NNNC          | Samsung Electro-Mechanics   | 100        | 0.0044          | 0.44           | 0402                                  | 220nF ±10% 16V Ceramic Capacitor X7R 0402                                                                                  | https://www.lcsc.com/product-detail/C16772.html    |
+| BMP585                   | Bosch                       | 1          | 2.2083          | 2.21           | LGA-9(3.3x3.3)                        | 30Kpa~1.25bar LGA-9(3.3x3.3) Pressure Sensors, Transducers RoHS                                                            | https://www.lcsc.com/product-detail/C18184976.html |
+| 0402WGF1001TCE           | UNI-ROYAL                   | 100        | 0.0006          | 0.06           | 0402                                  | 1kΩ ±1% 62.5mW 0402 Thick Film Resistor                                                                                    | https://www.lcsc.com/product-detail/C11702.html    |
+| LD39200PU33R             | ST                          | 1          | 1.2693          | 1.27           | DFN-6(3x3)                            | Positive Fixed 3.3V DFN-6(3x3) Voltage Regulators - Linear, Low Drop Out (LDO) Regulators RoHS                             | https://www.lcsc.com/product-detail/C222192.html   |
+| CL05A475MP5NRNC          | Samsung Electro-Mechanics   | 50         | 0.0048          | 0.24           | 0402                                  | 4.7uF ±20% 10V Ceramic Capacitor X5R 0402                                                                                  | https://www.lcsc.com/product-detail/C23733.html    |
+| 0402WGF220JTCE           | UNI-ROYAL                   | 100        | 0.0007          | 0.07           | 0402                                  | 22Ω ±1% 62.5mW 0402 Thick Film Resistor                                                                                    | https://www.lcsc.com/product-detail/C25092.html    |
+| 0402WGF220KTCE           | UNI-ROYAL                   | 100        | 0.0009          | 0.09           | 0402                                  | 2.2Ω ±1% 62.5mW 0402 Thick Film Resistor                                                                                   | https://www.lcsc.com/product-detail/C25101.html    |
+| 0402WGF1002TCE           | UNI-ROYAL                   | 100        | 0.0006          | 0.06           | 0402                                  | 10kΩ ±1% 62.5mW 0402 Thick Film Resistor                                                                                   | https://www.lcsc.com/product-detail/C25744.html    |
+| 0402WGF2201TCE           | UNI-ROYAL                   | 100        | 0.0006          | 0.06           | 0402                                  | 2.2kΩ ±1% 62.5mW 0402 Thick Film Resistor                                                                                  | https://www.lcsc.com/product-detail/C25879.html    |
+| 0402WGF4701TCE           | UNI-ROYAL                   | 100        | 0.0006          | 0.06           | 0402                                  | 4.7kΩ ±1% 62.5mW 0402 Thick Film Resistor                                                                                  | https://www.lcsc.com/product-detail/C25900.html    |
+| ANR4012T470M             | APV                         | 10         | 0.0517          | 0.52           | SMD,4x4mm                             | 47uH Magnetic Shielded Inductor 500mA SMD,4x4mm Fixed Inductors RoHS                                                       | https://www.lcsc.com/product-detail/C7497063.html  |
+Total: $38.34 USD
+
+
+---
 *Find extensive journalling on my Hack Club Blueprint Project: https://blueprint.hackclub.com/projects/4721*
 ---
 
