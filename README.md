@@ -17,14 +17,11 @@ The main microcontroller running the watch is an Espressif ESP32-S3 running with
 ---
 ## PCB:
 
-
-*Parameters:*
 -  4 layers
 -  Flex PCB
 -  Single-sided component placement
 -  0.2mm board thickness
 -  Added 0.1mm FR4 stiffeners
-
 
 *Schematics:*
 <img width="2993" height="2115" alt="E-ink watch sensors schematic" src="https://github.com/user-attachments/assets/d2e8a765-7ff3-49c3-917e-8c7fe9fb490c" />
@@ -32,11 +29,43 @@ The main microcontroller running the watch is an Espressif ESP32-S3 running with
 <img width="2993" height="2115" alt="E-ink watch drivers schematic" src="https://github.com/user-attachments/assets/70d8513a-2852-4016-9230-cde40bc6e5e5" />
 <img width="2993" height="2115" alt="E-ink watch displays schematic" src="https://github.com/user-attachments/assets/374afe60-b3ea-41e2-b6da-ca43353d284f" />
 
-
-
 *PCB Layout and render:*
 <img width="1454" height="585" alt="Screenshot 2025-12-14 at 1 22 46 pm" src="https://github.com/user-attachments/assets/16a535e6-246d-4e0d-91d4-3cafa5ae3504" />
 <img width="2560" height="1440" alt="render4" src="https://github.com/user-attachments/assets/a82eb673-f5c0-45c7-9ac9-8d790fc45b2b" />
+
+---
+
+## Enclosure:
+
+- Main cases and top plates of easch segment 3D printed using an SLA/MSLA printer
+- Main cases printed in Black resin from JLC3DP (can substitute with any rigid resin)
+- Top plates printed in LEDO 6060 resin from JLC3DP (can substitute with any rigid resin)
+- Bottom plates for OLED segments are CNC machined from 6061 Aluminium by JLCCNC (can substitute with any rigid material or also with SLA/MSLA printed resin)
+- Bottom plate for main E-ink segment 3D printed using an SLM printer in 316L stainless steel (can substitute with other rigid metal with high thermal conductivity)
+
+---
+
+## Assembly instructions:
+
+1. Use the solder stencil to squeegee solder paste onto main PCB
+2. Place each component onto its respective pads on the main PCB
+3. Use a hotplate or a reflow oven to reflow the solder paste underneath the components
+4. Hand-solder a thin insulated wire (enamel insulated or rubber insulated) connecting the pads "BATT1_WIRE" together on the PCB
+5. Create a solder bridge connecting the pads "GND_TO_GNDIO" and "GNDIO_TO_GND"
+6. Create a solder bridge connecting the pads "GND_TO_GNDPWR" and "GNDPWR_TO_GND"
+7. Assemble the two "end battery" segments by threading battery wires through them, placing the battery in and attaching the top plates to their respective main cases with superglue
+8. Assemble the other battery segment and the haptic module segment in the same way, but thread the "end battery" wires through the dedicated channels in these segments, you should have two sets of two segments with four wires coming out of each set of segments
+9. Take the main cases of the OLED modules and superglue the OLED displays into the top of each, making sure the flex cables poke through their dedicated holes
+10. Do the same with the E-ink segment and the E-ink display
+11. Attach each remaining top plate to its respective main case using superglue
+12. Place and superglue the main Flex PCB into the bottom of the E-ink segment and the two OLED segments. The back of the PCB should face the displays
+13. Thread the wires from the two sets of segments from step 8 through the holes in the side of the OLED modules and hand-solder the wires onto their respective pads
+14. Plug in the flex cables from each display into thir respective FPC connectors on the main PCB
+15. Superglue the bottom panels for the OLED segments onto their respective main cases
+16. Apply thermal paste on the ESP32-S3 chip on the main PCB
+17. Superglue the bottom panel to the main case of the E-ink segment
+18. Superglue the side TPU pieces to the sides of all the segments
+19. Plug in a patch antenna into the exposed U.FL port on the back of the watch, guide the cable through its designated groove, and stick the patch antenna somewhere on the watch
 
 ---
 ## Bill of materials:
@@ -53,7 +82,8 @@ The main microcontroller running the watch is an Espressif ESP32-S3 running with
 | BHI260AP                 | Bosch                       | 1          | 8.7882          | 8.79           | LGA-44                                 | LGA-44 IMUs (Inertial Measurement Units) RoHS                                                                              | https://www.lcsc.com/product-detail/C3288651.html  |
 | SI1308EDL-T1-GE3         | VISHAY                      | 5          | 0.1324          | 0.66           | SOT-323                                | N-Channel 30V 1.5A 0.4W Surface Mount SOT-323                                                                              | https://www.lcsc.com/product-detail/C469327.html   |
 | XC6206P302MR             | HXY MOSFET                  | 50         | 0.0154          | 0.77           | SOT-23                                 | Linear Voltage Regulator IC Positive Fixed 1 Output 300mA SOT-23                                                           | https://www.lcsc.com/product-detail/C5148691.html  |
-| MBR0530                  | Huixin                      | 20         | 0.0205          | 0.41           | SOD-123                                | 5.5A 30V 500mV@500mA 500mA SOD-123 Single Diodes RoHS                                                                      | https://www.lcsc.com/product-detail/C49435625.html |
+| MBR0530                  | Huixin                      | 20         | 0.0205          | 0.41           | SOD-123                                | 5.5A 30V 500mV@500mA 500mA SOD-123
+Single Diodes RoHS                                                                      | https://www.lcsc.com/product-detail/C49435625.html |
 | 0402WGF1004TCE           | UNI-ROYAL                   | 100        | 0.0006          | 0.06           | 0402                                   | 1MΩ ±1% 62.5mW 0402 Thick Film Resistor                                                                                    | https://www.lcsc.com/product-detail/C26083.html    |
 | CL05A105KA5NQNC          | Samsung Electro-Mechanics   | 100        | 0.0030          | 0.30           | 0402                                   | 1uF ±10% 25V Ceramic Capacitor X5R 0402                                                                                    | https://www.lcsc.com/product-detail/C52923.html    |
 | XL2EL89CPI-111YLC-40M    | YXC Crystal Oscillators     | 10         | 0.0578          | 0.58           | SMD3225-4P                             | Crystal 40MHz ±10ppm 15pF SMD3225-4P                                                                                       | https://www.lcsc.com/product-detail/C5444549.html  |
