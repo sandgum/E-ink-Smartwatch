@@ -138,8 +138,6 @@ Total: $136.48 USD
 ---
 ## Grand Total (Excl. Shipping): $217.99 USD
 ---
-*Find extensive journalling on my Hack Club Blueprint Project: https://blueprint.hackclub.com/projects/4721*
----
 
 <img width="3840" height="2160" alt="render2" src="https://github.com/user-attachments/assets/f0ed52fa-0158-4048-8f5a-b0dd56644882" />
 <img width="3840" height="2160" alt="render3" src="https://github.com/user-attachments/assets/27d17529-9d88-466d-976b-63a03502971e" />
