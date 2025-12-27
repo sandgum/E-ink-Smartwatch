@@ -64,9 +64,12 @@ The main microcontroller running the watch is an Espressif ESP32-S3 running with
 14. Plug in the flex cables from each display into thir respective FPC connectors on the main PCB
 15. Superglue the bottom panels for the OLED segments onto their respective main cases
 16. Apply thermal paste on the ESP32-S3 chip on the main PCB
-17. Superglue the bottom panel to the main case of the E-ink segment
-18. Superglue the side TPU pieces to the sides of all the segments
-19. Plug in a patch antenna into the exposed U.FL port on the back of the watch, guide the cable through its designated groove, and stick the patch antenna somewhere on the watch
+17. Superglue threaded inserts in the two dedicated holes in the corners of the bottom panel for the E-ink segment
+19. Superglue the bottom panel to the main case of the E-ink segment
+20. Screw two screws into the holes in the top case of the E-ink segment until they mesh with the threaded inserts from the previous step
+21. Take two more screws and cut off their entire threaded sections until just the heads remain. Superglue those heads in the holes in the other two corners of the top panel of the E-ink segment
+22. Superglue the side TPU pieces to the sides of all the segments
+23. Plug in a patch antenna into the exposed U.FL port on the back of the watch, guide the cable through its designated groove, and stick the patch antenna somewhere on the watch
 
 ---
 ## Bill of materials:
@@ -118,8 +121,12 @@ The main microcontroller running the watch is an Espressif ESP32-S3 running with
 | SSD1306                  | -                           | 2          | 0.72            | 1.44           | -                                      | 0.91 Inch I2C OLED Module                                                                                                  | https://www.aliexpress.com/item/1005004415958608.html?spm=a2g0o.tesla.0.0.4820nU7CnU7Cr1&pdp_npi=6%40dis%21AUD%21AU%241.39%21AU%241.05%21%21%21%21%21%402103122117624689217517794e3108%2112000046550658291%21btfpre%21%21%21%211%210%21&afTraceInfo=1005004415958608__pc__c_ppc_item_bridge_pc_main__vt8pak6__1762468921809 |
 | 401225                   | -                           | 3          | 2.66            | 7.98           | -                                      | 3.7V 100mAh Lithium Polymer Lipo Rechargeable Battery                                                                      | https://www.aliexpress.com/item/1005006129236699.html?spm=a2g0o.cart.0.0.157538daxZfUfb&mp=1&pdp_npi=5%40dis%21AUD%21AUD%204.73%21AUD%204.02%21%21AUD%204.02%21%21%21%402103212317648973370843232e461d%2112000035892453159%21ct%21AU%216047249797%21%211%210 |
 | 0619AAC                  | -                           | 1          | 3.06            | 3.06           | -                                      | Brushless X-axis 1.2V 100mA Max Precision Vibration Motor                                                                  | https://www.aliexpress.com/item/1005006421331249.html?spm=a2g0o.tesla.0.0.24f1nmtsnmts4h&pdp_npi=6%40dis%21AUD%21AU%244.13%21AU%241.54%21%21%21%21%21%402101d9ef17624709252885249e887e%2112000049883253246%21btfpre%21%21%21%211%210%21&afTraceInfo=1005006421331249__pc__c_ppc_item_bridge_pc_main__epipcn9__1762470925359 |
+| TS-A002                  | -                           | 20         | 0.069           | 1.38           | -                                      | Momentary Tact Switch SMD                                                                                                  | https://www.aliexpress.com/item/1005008702742151.html?spm=a2g0o.cart.0.0.785138daOe1hVa&mp=1&pdp_npi=5%40dis%21USD%21USD%201.38%21USD%201.38%21%21USD%201.38%21%21%21%4021033d1217668082665115137ee51b%2112000046642944142%21ct%21AU%216047249797%21%211%210 |
+| -                        | -                           | 50         | 0.0264          | 1.32           | -                                      | M1.4 Torx countersunk machine screw 4mm length                                                                             | https://www.aliexpress.com/item/33006942612.html?spm=a2g0o.cart.0.0.172438dayDrOXJ&mp=1&pdp_npi=5%40dis%21USD%21USD%201.32%21USD%201.32%21%21USD%201.32%21%21%21%402103212317668074428231957e8041%2167012387977%21ct%21AU%216047249797%21%211%210 |
+| -                        | -                           | 50        | 0.0244          | 1.22            | -                                      | M1.4 Brass threaded inserts 1.5mm length                                                                                   | https://www.aliexpress.com/item/1005007653131713.html?spm=a2g0o.cart.0.0.785138daOe1hVa&mp=1&pdp_npi=5%40dis%21USD%21USD%201.36%21USD%201.22%21%21USD%201.22%21%21%21%402101e2b217668079638444750e2ddc%2112000041667111405%21ct%21AU%216047249797%21%211%210&pdp_ext_f=%7B%22cart2PdpParams%22%3A%7B%22pdpBusinessMode%22%3A%22retail%22%7D%7D |
 
-Total: $81.51 USD
+
+Total: $85.43 USD
 
 
 *Manufactured Components*
@@ -136,7 +143,7 @@ Total: $81.51 USD
 Total: $136.48 USD
 
 ---
-## Grand Total (Excl. Shipping): $217.99 USD
+## Grand Total (Excl. Shipping): $221.91 USD
 ---
 
 <img width="3840" height="2160" alt="render2" src="https://github.com/user-attachments/assets/f0ed52fa-0158-4048-8f5a-b0dd56644882" />
